@@ -3,9 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Ryan Ravikumar Portfolio</title>
 </head>
 <body>
+    <nav class="navbar">
+        <ul>
+            <li class="logo"><img src="assets/logo.jpeg" alt="logo"></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="home">
+        <section class="hero">
+            <img src="assets/background.jpeg" alt="Ryan Ravikumar" class="hero-image">
+            <div class="hero-text">
+                <h1>Hey, I'm <span>Ryan</span> Ravikumar</h1>
+                <h2>Developer | Student | Tutor</h2>
+            </div>
+        </section>
+
+        <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="assets/about.jpeg" alt="About Me">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>An aspiring developer with strong foundational knowledge in developing responsive web-based applications. I bring hands-on experience in web design and backend logic, and I'm eager to contribute to real-world software projects.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming Languages</span><br>Java, JavaScript, C#, C</li>
+                                <li><span>Database Management</span><br>MySQL, Oracle Database, MongoDB</li>
+                                <li><span>Full-Stack Development</span><br>HTML, CSS, PHP</li>
+                                <li><span>Frameworks & Design Patterns</span><br>Spring Boot (Microservices Architecture), MVC</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>O/L Edexcel Tutor (2021 - Present)</span><br>Mathematics, ICT, Computer Science</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Bachelor of Science, Computing (Software Engineering)</span><br>Diploma in Computer System Design<ul><li>GPA: 3.9</li></ul>Higher National Diploma in Software Engineering<ul><li>GPA: 4.0 (Ongoing)</li></ul></li>
+                                <li><span>Certifications</span><br>OCI 2025 AI Foundations Associate (Oracle)</li>
+                                <li><span>Online Courses</span><br>Cisco:<ul><li>Networking Basics</li><li>Intro to Modern AI</li><li>Hardware Basics</li></ul>AWS Educate:<ul><li>Cloud 101</li></ul></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="projects">
+            <div class="container">
+              <h1 class="sub-title">Projects</h1>
+              <div class="row">
+                <div class="project-col-1">
+                  <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openProject('project1')">Web App</p>
+                    <p class="tab-links" onclick="openProject('project2')">Robotics</p>
+                    <p class="tab-links" onclick="openProject('project3')">Project 3</p>
+                  </div>
+          
+                  <div class="tab-contents active-tab" id="project1">
+                    <h3>Food Ordering App</h3>
+                    <p>Together with my team, I developed a food ordering application using a microservices architecture. We utilized several technologies, including:</p>
+                    <ul>
+                      <li>Spring Boot – To develop the backend microservices.</li>
+                      <li>REST – To expose backend APIs.</li>
+                      <li>React – To build the frontend interface.</li>
+                      <li>Axios – To handle API requests on the frontend.</li>
+                      <li>MySQL – To manage database storage.</li>
+                    </ul>
+                    <p>The microservices we implemented include:</p>
+                    <ul>
+                      <li>User Service – Handles user registration, authentication, and profile management.</li>
+                      <li>Restaurant Service – Manages and displays dynamic restaurant details.</li>
+                      <li>Menu Service – Retrieves and displays menu information dynamically.</li>
+                      <li>Discount Service – Validates discount codes.</li>
+                      <li>Order Service – Processes user orders, validates requests, and calculates the total payment.</li>
+                      <li>Review Service – To manage user reviews and ratings.</li>
+                        <li>Email Notification Service – Sends email notifications to users with order details and the total amount due.</li>
+                        <button class="btn-project1"><a href="https://github.com/RyanAdrianRavikumar/food-delivery-app.git" target="_blank">View Source Code</a></button>
+                  </div>
+          
+                  <div class="tab-contents" id="project2">
+                    <h3>Greenhouse/Garden Management Robot</h3>
+                    <p>As part of our robotics project, we designed and built an autonomous robot to assist with smart greenhouse management. This project enhanced our skills in robotics, sensor integration, and automation.
+                    <br>Key features include:</p>
+                    <ul>
+                      <li>Path-following capability for navigating greenhouse/garden areas.</li>
+                      <li>Obstacle detection and avoidance for safe operation.</li>
+                      <li>Plant detection with soil moisture sensing and automated watering based on soil dryness.</li>
+                      <li>Item categorization for efficient resource management.</li>
+                        <li>Color detection.</li>
+                    </ul>
+                  </div>
+          
+                  <div class="tab-contents" id="project3">
+                    <h3>Urban Food Marketplace</h3>
+                    <p>Web application using Oracle DB and MongoDB for managing urban agricultural product listings and customer reviews.</p>
+                  </div>
+                </div>
+          
+                <div class="project-col-2">
+                  <div class="tab-media active-tab" id="project1-media">
+                    <img src="assets/projects/ead-2/architecture.jpeg" alt="Project 1 Image" class="project-image">
+                  </div>
+          
+                  <div class="tab-media" id="project2-media">
+                    <img src="assets/projects/robotics/robot.jpeg" alt="Project 2 Image" class="project-image">
+                    <video controls width="100%">
+                      <source src="assets/projects/robotics/robot.mov" type="video/mp4">
+                    </video>
+                  </div>
+          
+                  <div class="tab-media" id="project3-media">
+                    <img src="assets/project3.png" alt="Project 3 Image" class="project-image">
+                    <video controls width="100%">
+                      <source src="assets/project3-video.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="coltact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i> ryanadrianravikumar@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> +94 761885576</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/ryan-ravikumar-4900b1322/"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="images/Ryan Adrian Ravikumar CV V4.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="coltact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" placeholder="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function opentab(tabname){
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            for(let tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(let tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        function openProject(projectId) {
+          const links = document.querySelectorAll(".tab-links");
+          const contents = document.querySelectorAll(".tab-contents");
+          const media = document.querySelectorAll(".tab-media");
+      
+          links.forEach(link => link.classList.remove("active-link"));
+          contents.forEach(content => content.classList.remove("active-tab"));
+          media.forEach(m => m.classList.remove("active-tab"));
+      
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(projectId).classList.add("active-tab");
+          document.getElementById(projectId + "-media").classList.add("active-tab");
+        }
+      </script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyZb_bfOjlc1lR55bQzN030dmzQaHCIjveDeO4St5-TaM-o_27qaHNPjBj-ULG08MtIvA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
     
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!";
+                setTimeout(function(){
+                    msg.innerHTML = "";
+                }, 5000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
