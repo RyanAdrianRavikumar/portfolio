@@ -10,13 +10,16 @@
 </head>
 <body>
     <nav class="navbar">
-        <ul>
-            <li class="logo"><img src="assets/logo.jpeg" alt="logo"></li>
+        <div class="logo"><img src="assets/logo.jpeg" alt="logo"></div>
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
     <main id="home">
@@ -71,92 +74,102 @@
 
         <div id="projects">
             <div class="container">
-              <h1 class="sub-title">Projects</h1>
-              <div class="row">
-                <div class="project-col-1">
-                  <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="openProject('project1')">Web App</p>
-                    <p class="tab-links" onclick="openProject('project2')">Robotics</p>
-                    <p class="tab-links" onclick="openProject('project3')">Project 3</p>
-                  </div>
-          
-                  <div class="tab-contents active-tab" id="project1">
-                    <h3>Food Ordering App</h3>
-                    <p>Together with my team, I developed a food ordering application using a microservices architecture. We utilized several technologies, including:</p>
-                    <ul>
-                      <li>Spring Boot – To develop the backend microservices.</li>
-                      <li>REST – To expose backend APIs.</li>
-                      <li>React – To build the frontend interface.</li>
-                      <li>Axios – To handle API requests on the frontend.</li>
-                      <li>MySQL – To manage database storage.</li>
-                    </ul>
-                    <p>The microservices we implemented include:</p>
-                    <ul>
-                      <li>User Service – Handles user registration, authentication, and profile management.</li>
-                      <li>Restaurant Service – Manages and displays dynamic restaurant details.</li>
-                      <li>Menu Service – Retrieves and displays menu information dynamically.</li>
-                      <li>Discount Service – Validates discount codes.</li>
-                      <li>Order Service – Processes user orders, validates requests, and calculates the total payment.</li>
-                      <li>Review Service – To manage user reviews and ratings.</li>
-                        <li>Email Notification Service – Sends email notifications to users with order details and the total amount due.</li>
-                        <button class="btn-project1"><a href="https://github.com/RyanAdrianRavikumar/food-delivery-app.git" target="_blank">View Source Code</a></button>
-                  </div>
-          
-                  <div class="tab-contents" id="project2">
-                    <h3>Greenhouse/Garden Management Robot</h3>
-                    <p>As part of our robotics project, we designed and built an autonomous robot to assist with smart greenhouse management. This project enhanced our skills in robotics, sensor integration, and automation.
-                    <br>Key features include:</p>
-                    <ul>
-                      <li>Path-following capability for navigating greenhouse/garden areas.</li>
-                      <li>Obstacle detection and avoidance for safe operation.</li>
-                      <li>Plant detection with soil moisture sensing and automated watering based on soil dryness.</li>
-                      <li>Item categorization for efficient resource management.</li>
-                        <li>Color detection.</li>
-                    </ul>
-                  </div>
-          
-                  <div class="tab-contents" id="project3">
-                    <h3>Urban Food Marketplace</h3>
-                    <p>Web application using Oracle DB and MongoDB for managing urban agricultural product listings and customer reviews.</p>
-                  </div>
+                <h1 class="sub-title">Projects</h1>
+                <div class="projects-wrapper">
+                    <div class="projects-tabs">
+                        <div class="project-tab-header">
+                            <div class="project-tab-links active-link" onclick="openProject('project1')">Web App</div>
+                            <div class="project-tab-links" onclick="openProject('project2')">Robotics</div>
+                            <div class="project-tab-links" onclick="openProject('project3')">Web App (Oracle & MongoDB)</div>
+                        </div>
+                        
+                        <div class="project-tab-content active-tab" id="project1">
+                            <h3>Food Ordering App</h3>
+                            <p>Together with my team, I developed a food ordering application using a microservices architecture. We utilized several technologies, including:</p>
+                            <ul>
+                                <li>Spring Boot – To develop the backend microservices</li>
+                                <li>REST – To expose backend APIs</li>
+                                <li>React – To build the frontend interface</li>
+                                <li>Axios – To handle API requests on the frontend</li>
+                                <li>MySQL – To manage database storage</li>
+                            </ul>
+                            <p>The microservices we implemented include:</p>
+                            <ul>
+                                <li>User Service – Handles user registration, authentication, and profile management</li>
+                                <li>Restaurant Service – Manages and displays dynamic restaurant details</li>
+                                <li>Menu Service – Retrieves and displays menu information dynamically</li>
+                                <li>Discount Service – Validates discount codes</li>
+                                <li>Order Service – Processes user orders and calculates payments</li>
+                                <li>Review Service – Manages user reviews and ratings</li>
+                                <li>Email Notification Service – Sends order confirmation emails</li>
+                            </ul>
+                            <button class="btn-project1">
+                                <a href="https://github.com/RyanAdrianRavikumar/food-delivery-app.git" target="_blank">
+                                    View Source Code
+                                </a>
+                            </button>
+                        </div>
+                        
+                        <div class="project-tab-content" id="project2">
+                            <h3>Greenhouse/Garden Management Robot</h3>
+                            <p>As part of our robotics project, we designed and built an autonomous robot to assist with smart greenhouse management. This project enhanced our skills in robotics, sensor integration, and automation.</p>
+                            <p>Key features include:</p>
+                            <ul>
+                                <li>Path-following capability for navigation</li>
+                                <li>Obstacle detection and avoidance</li>
+                                <li>Plant detection with soil moisture sensing</li>
+                                <li>Automated watering system</li>
+                                <li>Item categorization system</li>
+                                <li>Color detection capabilities</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tab-content" id="project3">
+                            <h3>Urban Food Marketplace</h3>
+                            <p>Web application using Oracle DB and MongoDB for managing urban agricultural product listings and customer reviews. Developed with:</p>
+                            <ul>
+                                <li>Full-stack JavaScript implementation</li>
+                                <li>Hybrid database architecture</li>
+                                <li>Geolocation-based product listings</li>
+                                <li>User review and rating system</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <div class="projects-media">
+                        <div class="project-media active-media" id="project1-media">
+                            <img src="assets/projects/ead-2/architecture.jpeg" alt="Food App Architecture" class="project-image">
+                        </div>
+                        <div class="project-media" id="project2-media">
+                            <img src="assets/projects/robotics/robot.jpeg" alt="Gardening Robot" class="project-image">
+                            <video controls class="project-video">
+                                <source src="assets/projects/robotics/robot.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-media" id="project3-media">
+                            <img src="assets/project3.png" alt="Marketplace Interface" class="project-image">
+                            <video controls class="project-video">
+                                <source src="assets/project3-video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                 </div>
-          
-                <div class="project-col-2">
-                  <div class="tab-media active-tab" id="project1-media">
-                    <img src="assets/projects/ead-2/architecture.jpeg" alt="Project 1 Image" class="project-image">
-                  </div>
-          
-                  <div class="tab-media" id="project2-media">
-                    <img src="assets/projects/robotics/robot.jpeg" alt="Project 2 Image" class="project-image">
-                    <video controls width="100%">
-                      <source src="assets/projects/robotics/robot.mov" type="video/mp4">
-                    </video>
-                  </div>
-          
-                  <div class="tab-media" id="project3-media">
-                    <img src="assets/project3.png" alt="Project 3 Image" class="project-image">
-                    <video controls width="100%">
-                      <source src="assets/project3-video.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
 
           <div id="contact">
             <div class="container">
                 <div class="row">
-                    <div class="coltact-left">
+                    <div class="contact-left">
                         <h1 class="sub-title">Contact Me</h1>
                         <p><i class="fa-solid fa-paper-plane"></i> ryanadrianravikumar@gmail.com</p>
                         <p><i class="fa-solid fa-phone"></i> +94 761885576</p>
                         <div class="social-icons">
                             <a href="https://www.linkedin.com/in/ryan-ravikumar-4900b1322/"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
-                        <a href="images/Ryan Adrian Ravikumar CV V4.pdf" download class="btn btn2">Download CV</a>
+                        <a href="assets/ryan-cv3.pdf" download class="btn btn2">Download CV</a>
                     </div>
-                    <div class="coltact-right">
+                    <div class="contact-right">
                         <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="email" name="Email" placeholder="Your Email" required>
@@ -187,17 +200,13 @@
     </script>
     <script>
         function openProject(projectId) {
-          const links = document.querySelectorAll(".tab-links");
-          const contents = document.querySelectorAll(".tab-contents");
-          const media = document.querySelectorAll(".tab-media");
-      
-          links.forEach(link => link.classList.remove("active-link"));
-          contents.forEach(content => content.classList.remove("active-tab"));
-          media.forEach(m => m.classList.remove("active-tab"));
-      
-          event.currentTarget.classList.add("active-link");
-          document.getElementById(projectId).classList.add("active-tab");
-          document.getElementById(projectId + "-media").classList.add("active-tab");
+            document.querySelectorAll('.project-tab-links').forEach(link => link.classList.remove('active-link'));
+            document.querySelectorAll('.project-tab-content').forEach(content => content.classList.remove('active-tab'));
+            document.querySelectorAll('.project-media').forEach(media => media.classList.remove('active-media'));
+
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(projectId).classList.add('active-tab');
+            document.getElementById(`${projectId}-media`).classList.add('active-media');
         }
       </script>
       <script>
@@ -217,6 +226,22 @@
             })
             .catch(error => console.error('Error!', error.message))
         })
+      </script>
+      <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
       </script>
 </body>
 </html>
